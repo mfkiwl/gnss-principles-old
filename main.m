@@ -90,8 +90,8 @@ figure
 plot(0:N-1, X_r(1) - x_est(:,1))
 hold on
 plot(0:N-1, X_r(2) - x_est(:,2))
-legend('x pos', 'y pos')
-title('pos error')
-ylim([-1e4, 1e4])
+legend('x', 'y')
+title('Receiver Position Error')
+ylim([-100, 100])
 ylabel('position (m)')
 xlabel('time (s)')

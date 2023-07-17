@@ -55,7 +55,7 @@ Q(2,2) = 1e-10;
 Q(3,3) = 1e-10;
 
 % measurement uncertainty
-R = diag(0.1*ones(1,n_y));
+R = diag(1e-10*ones(1,n_y));
 
 %% first write
 
