@@ -8,7 +8,7 @@ Re = 6371e3;  % earth mean radius
 
 %% sim
 
-orbital_radius = 20e6 + 6371e3;
+orbital_radius = 20e6 + Re;  % usual altitude of GNSS satellites + Earth's mean radius
 orbital_period = 2*pi*sqrt(orbital_radius^3/mu);
 
 Mdot = 2*pi/orbital_period;  % mean anomaly change

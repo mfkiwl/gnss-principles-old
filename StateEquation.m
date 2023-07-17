@@ -1,5 +1,5 @@
 
-function x_next = StateEquation()
+function x_next = StateEquation(x)
 
     x_next = x;
 

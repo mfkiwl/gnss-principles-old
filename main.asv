@@ -15,7 +15,7 @@ constants
 
 %% sim settings
 
-N = 60*10;  % sim time in sec
+N = 100;  % sim time in sec
 T = 1;  % sample time
 
 receiver_angle = deg2rad(45);  % starting receiver angle
@@ -25,7 +25,8 @@ X_r = Re*[cos(receiver_angle); sin(receiver_angle)];  % starting receiver locati
 
 std_dev_sat_pos = 0;
 
-receiver_clock_drift = 1e-5;  % constant clock error
+receiver_clock_drift = 1e-4;  % constant clock error
+% receiver_clock_drift = 0;  % constant clock error
 receiver_clock_bias = c*receiver_clock_drift;
 
 %% prep
@@ -87,11 +88,7 @@ ylim([receiver_clock_bias*0.5, receiver_clock_bias*2])
 title('receiver clock bias')
 
 figure
-plot(0:N-1, X_r(1) - x_est(:,1))
+yline(X_r(1))
 hold on
-plot(0:N-1, X_r(2) - x_est(:,2))
-legend('x pos', 'y pos')
-title('pos error')
-ylim([-1e4, 1e4])
-ylabel('position (m)')
-xlabel('time (s)')
+plot(0:N-1, x_est(:,1))
+title('pos e')

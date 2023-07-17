@@ -6,23 +6,12 @@ rng(1);
 dim = 2;
 n_sat = 4;
 
-eta_sim = zeros(N,(dim+1)*n_sat);
+xi_sim = zeros(N,(dim+1)*n_sat);
 eta_sim = zeros(N,(dim+1)*n_sat);
 
-% orbital_positions = zeros(dim, n_sat);
-% ranges = zeros(n_sat,1);
 satellite_params = zeros(dim+1,n_sat);
 
-%% artificial noise settings
-
-% sigma_sim = 2; % standard deviation of estimated satellite position
-
-% noise = normnrd(0,5, );
-
 %% initial conditions
-
-receiver_angle = deg2rad(25);  % starting receiver angle
-X_r = Re*[cos(receiver_angle); sin(receiver_angle)];  % starting receiver location on earth
 
 M0 = deg2rad([0; 10; 20; 30]);  % starting mean anomaly
 
@@ -62,6 +51,8 @@ for k=1:N
     M = M_next;
 end
 
+show_sim_plots = 0;
+if show_sim_plots == 1
 %% ground truth plots 
 
 figure
@@ -107,3 +98,4 @@ plot(0:N-1, xi_sim(:,3))
 hold on
 plot(0:N-1, eta_sim(:,3))
 legend('truth', 'noisy')
+end
