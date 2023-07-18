@@ -19,9 +19,10 @@ Self-study educational project with the goal of applying unscented Kalman filter
 
  
 - Future improvements
-  - 3D satellite orbits and z component to receiver position
+  - Simulate 3D satellite orbits and add z component to receiver position
   - Add satellite clock drift to pseudo-range equation
   - Add realistic atmospheric delay errors
   - Add some chance of outlier/failed range observations
   - Add Gaussian noise to satellite positions (requires adding them to the state vector instead of using them as inputs?)
   - Simulate dynamic receiver position
+  - Account for rotating earth
