@@ -44,15 +44,15 @@ x_corr(3) = c;
 
 % state uncertainty
 P_corr = diag(zeros(1,n_x));
-P_corr(1,1) = Re^2/3;
-P_corr(2,2) = Re^2/3;
-P_corr(3,3) = c^2;
+P_corr(1,1) = Re^2;
+P_corr(2,2) = Re^2;
+P_corr(3,3) = 1000;
 
 % process uncertainty
 Q = diag(zeros(1,n_x));
-Q(1,1) = 1e-10;
-Q(2,2) = 1e-10;
-Q(3,3) = 1e-10;
+Q(1,1) = 1e-9;
+Q(2,2) = 1e-9;
+Q(3,3) = 1e-9;
 
 % measurement uncertainty
 R = diag(1e-10*ones(1,n_y));

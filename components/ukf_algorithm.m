@@ -2,7 +2,7 @@
 %% cholesky
 [S_corr, con] = chol(P_corr, 'lower');
 if con > 0
-    disp('Cholesky error')
+    disp('Cholesky error... recovering')
     S_corr = diag(sqrt(abs(diag(P_corr))));
 end
 

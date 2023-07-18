@@ -1,6 +1,10 @@
 
 close all
 
+%%
+
+addpath('components', 'functions')
+
 %% plot settings
 
 set(0,'DefaultFigureWindowStyle','docked')
@@ -15,7 +19,7 @@ constants
 
 %% sim settings
 
-N = 60*10;  % sim time in sec
+N = 60*2;  % sim time in sec
 T = 1;  % sample time
 
 receiver_angle = deg2rad(45);  % starting receiver angle
@@ -92,6 +96,6 @@ hold on
 plot(0:N-1, X_r(2) - x_est(:,2))
 legend('x', 'y')
 title('Receiver Position Error')
-ylim([-100, 100])
-ylabel('position (m)')
+ylim([-10, 10])
+ylabel('position error (m)')
 xlabel('time (s)')

@@ -29,8 +29,7 @@ for k=1:N
     xi_sim(k,:) = reshape(satellite_params,1,[]);
 
     % orbits propagation
-    M_next = M + Mdot*T;
-    M = M_next;
+    M = OrbitPropagation(M, T, Mdot, Omegadot);
 end
 
 %% noisy simulation loop
@@ -47,8 +46,7 @@ for k=1:N
     eta_sim(k,:) = reshape(satellite_params,1,[]);
 
     % orbits propagation
-    M_next = M + Mdot*T;
-    M = M_next;
+    M = OrbitPropagation(M, T, Mdot, Omegadot);
 end
 
 show_sim_plots = 0;

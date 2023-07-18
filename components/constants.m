@@ -12,3 +12,4 @@ orbital_radius = 20e6 + Re;  % usual altitude of GNSS satellites + Earth's mean 
 orbital_period = 2*pi*sqrt(orbital_radius^3/mu);
 
 Mdot = 2*pi/orbital_period;  % mean anomaly change
+Omegadot = 2*pi/(24*60*60);  % Earth's radial velocity (rad/s)

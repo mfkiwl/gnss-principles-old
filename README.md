@@ -1,7 +1,7 @@
 # gnss-principles
 Self-study educational project with the goal of applying unscented Kalman filtering to determine receiver position from GNSS pseudo-range observations.
 
-![alt text](https://github.com/astroquest/gnss-principles/blob/main/results.png?raw=true)
+![alt text](https://github.com/astroquest/gnss-principles/blob/main/figures/results.png?raw=true)
 
 - Range and satellite position data generated with 2D orbit simulation of four satellites
   -  Satellites are in identical 20000 km 2D circular obits
@@ -23,4 +23,3 @@ Self-study educational project with the goal of applying unscented Kalman filter
   - Add some chance of outlier/failed range observations
   - Add Gaussian noise to satellite positions (requires adding them to the state vector instead of using them as inputs?)
   - Simulate dynamic receiver position
-  - Account for rotating earth
