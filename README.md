@@ -8,6 +8,7 @@ Self-study educational project with the goal of applying unscented Kalman filter
   -  Atmospheric delay effects on pseudo-range are neglected
 
 - Use range and satellite position data in UKF algorithm to fuse data into x and y coordinates of the receiver position
+  - Initial x and y at Earth's center (0,0), ECEF reference frame
   - Satellite position is assumed to be known without error and used as inputs for the UKF framework
   - Computed range observations are the outputs
   - Estimated states are x, y, and receiver clock bias (c*dt_r)
